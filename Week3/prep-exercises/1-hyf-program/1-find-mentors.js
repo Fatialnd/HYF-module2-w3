@@ -2,7 +2,7 @@ import { modules, students, mentors, classes } from "./hyf.js";
 
 const possibleMentorsForModule = (moduleName) => {
   return mentors
-    .filter((mentor) => mentor.skills.includes(moduleName))
+    .filter((mentor) => mentor.canTeach.includes(moduleName))
     .map((mentor) => mentor.name);
 };
 
